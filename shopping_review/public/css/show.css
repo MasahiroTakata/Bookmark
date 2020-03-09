@@ -1,0 +1,21 @@
+.detail_box{
+  width: 100%;
+  height: 500px;
+  display: flex;
+}
+.ul{
+}
+
+.li{
+
+}
+
+#delete_no{
+  font-size: 25px;
+  color: #008000;
+}
+
+#delete_yes{
+  font-size: 25px;
+  color: #FF3300;
+}
