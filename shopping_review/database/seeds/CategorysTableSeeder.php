@@ -11,8 +11,15 @@ class CategorysTableSeeder extends Seeder
      */
     public function run()
     {
-        // DB::table('categorys')->insert([
-        //     'name' => '野菜',
-        // ]);
+        DB::table('categorys')->insert([
+            [
+                'id' => 1,
+                'name' => '果物',
+            ],
+            [
+                'id' => 2,
+                'name' => '野菜'
+            ]
+        ]);
     }
 }

@@ -1,0 +1,116 @@
+.cartScreen{
+  width: 100%;
+}
+
+.shoppingCart{
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 30px;
+  padding-bottom: 3px;
+  font-size: 20px;
+  border-bottom: 1px solid #dedede;
+}
+
+table{
+  margin-left: 150px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 75%;
+}
+
+th{
+  border-top: 2px solid #b2b2b2;
+  border-bottom: 1px dashed #b2b2b2;
+  white-space: nowrap;
+  text-align: center;
+  padding: 6px;
+}
+
+td{
+  border-bottom: 1px solid #b2b2b2;
+  text-align: center;
+  padding: 6px;
+}
+
+.totalSpace{
+  background-color: #DDDDDD;
+}
+.totalPrice{
+  color: red;
+  font-size: 18px;
+}
+
+.blankMessage{
+  margin: 10px auto;
+}
+.boxs{
+  width: 70%;
+  float: left;
+}
+.cart_box{
+  padding-left: 30px;
+  display: flex;
+}
+.productDetail{
+  margin-left: 100px;
+  padding-top: 30px;
+}
+
+.detailList{
+  padding-top: 20px;
+}
+
+.menu_box{
+  margin-bottom: 50px;
+  padding-left: 150px;
+  justify-content: space-between;
+  display: flex;
+  width: 75%;
+}
+
+#buyConfirm{
+  padding-left: 20px;
+}
+
+.nothingMessage{
+  padding-top: 20px;
+  height: 100px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.link{
+  text-align: center;
+}
+
+#continueBuy{
+  padding: 0.3em 1em;
+  display: inline-block;
+  text-decoration: none;
+  color: #00BB00;
+  background-color: white;
+  border: solid 2px #00BB00;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+#continueBuy:hover{
+  background: #00BB00;
+  color: white;
+}
+
+#buyConfirm{
+  padding: 0.3em 1em;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: #00BB00;
+  border: solid 2px #00BB00;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+#buyConfirm:hover {
+  background: white;
+  color: #00BB00;
+}

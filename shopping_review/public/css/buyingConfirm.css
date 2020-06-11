@@ -1,0 +1,35 @@
+.userInfo{
+  display: flex;
+}
+.userAdd{
+  width:50%;
+  padding-top: 20px;
+  padding-left: 100px;
+}
+
+.cartBtn{
+  line-height: 100px;
+}
+
+#backBuying{
+  padding-left: 20px;
+}
+.cartsInfo{
+  padding-top: 20px;
+}
+
+.cart_box{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.productDetail{
+  margin-left: 100px;
+  padding-top: 30px;
+}
+
+.detailList{
+  padding-top: 20px;
+}

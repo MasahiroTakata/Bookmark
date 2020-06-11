@@ -1,0 +1,14 @@
+.loginMessage{
+  padding-top: 20px;
+  height: 200px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.btns{
+  text-align: center;
+}
+
+.links{
+  padding-right: 20px;
+}

@@ -1,13 +1,17 @@
 .detail_box{
-  width: 100%;
-  height: 500px;
+  width: 60%;
+  height: 450px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
 }
-.ul{
+.productDetail{
+  margin-left: 100px;
 }
 
-.li{
-
+.detailList{
+  padding-top: 20px;
 }
 
 #delete_no{
@@ -18,4 +22,58 @@
 #delete_yes{
   font-size: 25px;
   color: #FF3300;
+}
+
+.a_relatedProduct{
+  padding-left: 20px;
+  display: none;
+}
+
+.selectBtns{
+  display: flex;
+}
+
+#writeComment{
+  margin-left: 15px;
+}
+
+.commentSpace{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+.commentBox{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.custmerInfo{
+  margin-bottom: 10px;
+  color: gray;
+  height: 30px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.btns{
+  padding: 0.3em 1em;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: #00BB00;
+  border: solid 2px #00BB00;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.btns:hover {
+  background: white;
+  color: #00BB00;
+}
+
+.createdDate{
+  margin-left: 20px;
+  font-size: 11px;
 }

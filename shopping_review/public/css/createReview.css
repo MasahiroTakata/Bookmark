@@ -1,0 +1,57 @@
+.errorMessages{
+  text-align: center;
+  color: red;
+  margin-top: 20px;
+}
+
+.productSpace{
+  margin: 30px auto 0px auto;
+  width: 50%;
+  display: flex;
+}
+
+.productName{
+  height: 150px;
+  line-height: 150px;
+  padding-left: 30px;
+  width: 50%;
+}
+
+.reviewSpace{
+  width: 50%;
+  margin: 30px auto 0px auto;
+}
+
+.reviewArea{
+  width: 100%;
+}
+
+.reviewArea:focus{
+  outline: none;
+}
+
+.writeMessage{
+  margin-bottom: 10px;
+}
+
+.btnSpace{
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+}
+
+.postBtn {
+  padding: 0.3em 1em;
+  display: inline-block;
+  text-decoration: none;
+  color: #00BB00;
+  border: solid 2px #00BB00;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.postBtn:hover {
+  background: #00BB00;
+  color: white;
+}
