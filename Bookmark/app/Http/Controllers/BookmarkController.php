@@ -15,6 +15,7 @@ class BookmarkController extends Controller
     public function index()
     {
         $bookmarks = Bookmark::paginate(20); // ページネーション
+
         return view('bookmarks.index', compact('bookmarks')); // viewに渡す変数名と引数名が同じ場合は、compactメソッドが便利
     }
 
@@ -47,7 +48,7 @@ class BookmarkController extends Controller
      */
     public function show(Bookmark $bookmark)
     {
-        //
+        return view('bookmarks.show', compact('bookmark'));
     }
 
     /**

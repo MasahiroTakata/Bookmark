@@ -17,7 +17,10 @@ Route::get('/', function () { // 初期画面表示
     return view('welcome');
 });
 
-Route::get('bookmarks', 'BookmarkController@index');
+Auth::routes(); // ユーザ認証ページ
+Route::get('bookmarks', 'BookmarkController@index'); // 一覧
+Route::get('bookmarks/{bookmark}', 'BookmarkController@show') ->name('bookmarks.show'); // 詳細
+
 // Route::get('/test', function () { // 初期画面表示
 //     return 'test';
 // });
@@ -25,6 +28,5 @@ Route::get('bookmarks', 'BookmarkController@index');
 // Route::get('/test/{id}', function($id){
 //     return $id;
 // }) -> where('id', '[0-9]+'); // whereメソッドで、許可する文字の設定（この場合は半角数字のみ）
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
