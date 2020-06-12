@@ -61,7 +61,7 @@ class BookmarkController extends Controller
      */
     public function edit(Bookmark $bookmark)
     {
-        //
+        return view('bookmarks.edit', compact('bookmark'));
     }
 
     /**
@@ -73,7 +73,9 @@ class BookmarkController extends Controller
      */
     public function update(Request $request, Bookmark $bookmark)
     {
-        //
+        $bookmark::update($request->all());
+
+        return redirect()->route('bookmarks.edit', $bookmark);
     }
 
     /**
