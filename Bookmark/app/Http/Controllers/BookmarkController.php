@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Bookmark;
-use Illuminate\Http\Request;
+use App\Http\Requests\BookmarkRequest;
 
 class BookmarkController extends Controller
 {
@@ -23,7 +23,7 @@ class BookmarkController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create() // フォームを用意するためのメソッド
+    public function create() // 画面を用意
     {
         return view('bookmarks.create');
     }
@@ -34,7 +34,7 @@ class BookmarkController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request) // 登録メソッド
+    public function store(BookmarkRequest $request) // テーブルに登録する
     {
         Bookmark::create($request->all());
         return redirect()->route('bookmarks.index')
@@ -58,7 +58,7 @@ class BookmarkController extends Controller
      * @param  \App\Bookmark  $bookmark
      * @return \Illuminate\Http\Response
      */
-    public function edit(Bookmark $bookmark)
+    public function edit(BookmarkRequest $bookmark)
     {
         return view('bookmarks.edit', compact('bookmark'));
     }
@@ -70,7 +70,7 @@ class BookmarkController extends Controller
      * @param  \App\Bookmark  $bookmark
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Bookmark $bookmark)
+    public function update(BookmarkRequest $request, Bookmark $bookmark)
     {
         $bookmark::update($request->all());
         return redirect()->route('bookmarks.edit', $bookmark)
