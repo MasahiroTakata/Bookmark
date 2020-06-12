@@ -13,15 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () { // 初期画面表示
-    return view('welcome');
-});
+// Route::get('/', function () { // 初期画面表示
+//     return view('welcome');
+// });
 
-Auth::routes(); // ユーザ認証ページ
 // Route::get('bookmarks', 'BookmarkController@index'); // 一覧
 // Route::get('bookmarks/{bookmark}', 'BookmarkController@show') ->name('bookmarks.show'); // 詳細
 // Route::post('bookmarks', 'BookmarkControllelr@store'); // 追加
-
+Auth::routes(); // ユーザ認証ページ
+Route::get('/', 'BookmarkController@index'); // 初期画面表示
 Route::resource('bookmarks', 'BookmarkController'); // CRUD処理のルーティングを呼び出せる
 // Route::get('/test', function () { // 初期画面表示
 //     return 'test';
