@@ -15,7 +15,6 @@ class BookmarkController extends Controller
     public function index()
     {
         $bookmarks = Bookmark::orderBy('id', 'desc')->paginate(20); // ページネーション（idの降順）
-
         return view('bookmarks.index', compact('bookmarks')); // viewに渡す変数名と引数名が同じ場合は、compactメソッドが便利
     }
 
@@ -38,8 +37,8 @@ class BookmarkController extends Controller
     public function store(Request $request) // 登録メソッド
     {
         Bookmark::create($request->all());
-
-        return redirect()->route('bookmarks.index');
+        return redirect()->route('bookmarks.index')
+        ->with('status', 'ブックマークを登録しました。');
     }
 
     /**
@@ -74,8 +73,8 @@ class BookmarkController extends Controller
     public function update(Request $request, Bookmark $bookmark)
     {
         $bookmark::update($request->all());
-
-        return redirect()->route('bookmarks.edit', $bookmark);
+        return redirect()->route('bookmarks.edit', $bookmark)
+        ->with('status', 'ブックマークを更新しました。');
     }
 
     /**
@@ -86,6 +85,8 @@ class BookmarkController extends Controller
      */
     public function destroy(Bookmark $bookmark)
     {
-        //
+        $bookmark->delete();
+        return redirect()->route('bookmarks.index')
+        ->with('status', 'ブックマークを削除しました。');
     }
 }
