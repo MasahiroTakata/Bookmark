@@ -14,7 +14,7 @@ class BookmarkController extends Controller
      */
     public function index()
     {
-        $bookmarks = Bookmark::paginate(20); // ページネーション
+        $bookmarks = Bookmark::orderBy('id', 'desc')->paginate(20); // ページネーション（idの降順）
 
         return view('bookmarks.index', compact('bookmarks')); // viewに渡す変数名と引数名が同じ場合は、compactメソッドが便利
     }
@@ -24,9 +24,9 @@ class BookmarkController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create() // フォームを用意するためのメソッド
     {
-        //
+        return view('bookmarks.create');
     }
 
     /**
@@ -35,9 +35,11 @@ class BookmarkController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request) // 登録メソッド
     {
-        //
+        Bookmark::create($request->all());
+
+        return redirect()->route('bookmarks.index');
     }
 
     /**
