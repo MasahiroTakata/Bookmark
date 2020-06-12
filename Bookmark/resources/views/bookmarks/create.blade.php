@@ -7,6 +7,7 @@
             <div class="card">
                 <div class="card-header">ブックマーク登録</div>
                   <div class="card-body">
+                    @include('components.alert')
                     <form method="POST" action="{{ route('bookmarks.store') }}">
                       @csrf
                       @include('bookmarks.fields')

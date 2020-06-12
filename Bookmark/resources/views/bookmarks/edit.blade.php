@@ -7,6 +7,7 @@
             <div class="card">
                 <div class="card-header">ブックマーク編集</div>
                   <div class="card-body">
+                    @include('components.alert')
                     <form method="POST" action="{{ route('bookmarks.update', $bookmark) }}">
                       @csrf
                       @include('bookmarks.fields')
