@@ -58,7 +58,7 @@ class BookmarkController extends Controller
      * @param  \App\Bookmark  $bookmark
      * @return \Illuminate\Http\Response
      */
-    public function edit(BookmarkRequest $bookmark)
+    public function edit(Bookmark $bookmark)
     {
         return view('bookmarks.edit', compact('bookmark'));
     }
