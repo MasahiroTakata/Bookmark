@@ -11,7 +11,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        // ターミナルでこのファイルを実行すると、以下のseederファイルが実行される
         // $this->call(UserSeeder::class);
         $this->call(BookmarksTableSeeder::class);
+        $this->call(TagsTableSeeder::class);
     }
 }

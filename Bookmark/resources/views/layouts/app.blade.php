@@ -33,7 +33,12 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li class="{{ Request::is('bookmarks', 'bookmarks/*') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('bookmarks.index') }}">ブックマーク</a>
+                        </li>
+                        <li class="{{ Request::is('tags', 'tags/*') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('tags.index') }}">タグ</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
