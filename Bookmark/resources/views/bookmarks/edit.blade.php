@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -9,6 +8,7 @@
                   <div class="card-body">
                     @include('components.alert')
                     <form method="POST" action="{{ route('bookmarks.update', $bookmark) }}">
+                      @method('PUT')
                       @csrf
                       @include('bookmarks.fields')
                     </form>

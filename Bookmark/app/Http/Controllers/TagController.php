@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tag;
+use App\Bookmark;
 use App\Http\Requests\TagRequest;
 
 class TagController extends Controller
@@ -77,6 +78,7 @@ class TagController extends Controller
     {
         $tag->delete();
         $tag->bookmarks()->detach();
+
         return redirect()
             ->route('tags.index')
             ->with('status', 'タグを削除しました。');

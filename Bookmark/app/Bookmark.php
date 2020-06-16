@@ -11,6 +11,8 @@ class Bookmark extends Model
         'title', 'url', 'description'
     ];
 
+    protected $with=['tags'];
+
     public function tags()
     {
         return $this->belongsToMany(Tag::class); // リレーション（１つのブックマークには複数のタグが存在する）
