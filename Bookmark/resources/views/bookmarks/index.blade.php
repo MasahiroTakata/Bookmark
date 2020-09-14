@@ -25,7 +25,7 @@
                           <td class="align-middle"><a href="{{ $bookmark->url }}">{{ $bookmark->title }}</a></td>
                           <td class="align-middle">
                             @foreach($bookmark->tags as $tag)
-                              <a href=" {{ route('tags.show', $tag->id) }} ">{{ $tag->title }}</a>
+                              <a href=" {{ action('BookmarkController@tagToBookmarks', $tag->id) }} ">{{ $tag->title }}</a>
                               @unless($loop->last)
                                 ,
                               @endunless
@@ -45,7 +45,6 @@
                         </tr>
                       @endforeach
                     </table>
-                    {{ $bookmarks->links() }}
                   </div>
             </div>
         </div>
