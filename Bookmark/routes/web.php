@@ -24,9 +24,11 @@ Auth::routes(); // ユーザ認証ページ
 
 Route::group(['middleware' => 'auth'], function () { // ログイン制御をかける
   Route::get('/', 'BookmarkController@index');
-  Route::resource('bookmarks', 'BookmarkController');
+  Route::resource('bookmarks', 'BookmarkController'); // resourceメソッドで、CRUD全ての処理を呼び出せる
   Route::resource('tags', 'TagController');
 });
+
+Route::get('/tagBookmarks/{tag_id}', 'BookmarkController@tagToBookmarks'); // タグに紐づくブックマークを一覧表示する
 
 // Route::resource('bookmarks', 'BookmarkController'); // CRUD処理のルーティングを呼び出せる
 // Route::get('/test', function () { // 初期画面表示
